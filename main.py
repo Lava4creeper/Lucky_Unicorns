@@ -1,13 +1,17 @@
 #loop the program
-show_instructions = ""
-while show_instructions != 'xxx':
+response = ""
+while response != 'xxx':
   #ask the user if they have played before
-  show_instructions = input('Have you played before?').lower()
+  response = input('Have you played before?').lower()
   #If they say yes, program continues
-  if show_instructions == 'yes' or show_instructions == 'y':
+  if response == 'yes' or response == 'y':
+    response = 'yes'
+    print('You answered ' + response)
     print('Program Continues')
   #If they say no, output 'Display Instructions'
-  elif show_instructions == 'no' or show_instructions == 'n':
+  elif response == 'no' or response == 'n':
+    response = 'no'
+    print('You answered ' + response)
     print('Display Instructions')
   #If they put in an unrecognised value, output "Error. Please input a valid value"
   else:
